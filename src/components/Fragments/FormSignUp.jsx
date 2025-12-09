@@ -1,6 +1,7 @@
 import React from "react";
 import LabeledInput from "../Elements/LabeledInput";
 import Button from "../Elements/Button";
+import { Link } from "react-router-dom"; 
 
 function FormSignUp() {
   return (
@@ -11,7 +12,7 @@ function FormSignUp() {
           {/* 1. Input Nama Lengkap (Tambahan untuk Sign Up) */}
           <div className="mb-6">
             <LabeledInput 
-              label="Nama Lengkap"
+              label="Name"
               id="name"
               type="text"
               placeholder="Masukkan nama Anda"
@@ -40,20 +41,13 @@ function FormSignUp() {
               name="password"
             />
           </div>
-          
-          {/* 4. Input Konfirmasi Password (Opsional tapi disarankan untuk Sign Up) */}
-          <div className="mb-6">
-            <LabeledInput 
-              label="Konfirmasi Password"
-              id="confirm_password"
-              type="password"
-              placeholder="Ulangi password Anda"
-              name="confirm_password"
-            />
+
+          <div className="text-xs text-gray-03 mb-4">
+              By continuing, you agree to our <a href="#" className="text-primary font-medium">terms of service</a>.
           </div>
 
           {/* Tombol Submit */}
-          <Button>Daftar</Button> 
+          <Button>Sign Up</Button> 
         </form>
       </div>
       {/* Form Sign Up end */}
@@ -122,10 +116,18 @@ function FormSignUp() {
       {/* Sign Up with Google end */}
       
       {/* Link ke Sign In start */}
-      <div className="flex justify-center">
-        {/* Link ini mengarahkan ke halaman Login/Sign In */}
-        <a className="text-primary text-sm font-bold">I already have an account</a> 
-      </div>
+      <div className="flex justify-center text-sm"> 
+        <span className="text-gray-03">
+          Already have an account?&nbsp; 
+        </span>
+        {/* Link ini mengarahkan ke halaman Login/Sign In */}
+        <Link 
+          to="/" 
+          className="text-primary font-medium" 
+        >
+          Sign in here
+        </Link>
+      </div>
       {/* Link ke Sign In end */}
     </>
   );
