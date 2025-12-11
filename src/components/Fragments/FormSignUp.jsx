@@ -116,15 +116,10 @@ function FormSignUp() {
       {/* Sign Up with Google end */}
       
       {/* Link ke Sign In start */}
-      <div className="flex justify-center text-sm"> 
-        <span className="text-gray-03">
+      <div className="flex justify-center text-sm text-gray-01"> 
           Already have an account?&nbsp; 
-        </span>
         {/* Link ini mengarahkan ke halaman Login/Sign In */}
-        <Link 
-          to="/" 
-          className="text-primary font-medium" 
-        >
+        <Link to="/login" className="text-primary font-bold">
           Sign in here
         </Link>
       </div>
