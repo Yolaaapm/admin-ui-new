@@ -32,7 +32,11 @@ export const expensesBreakdowns = [
     amount: 250,
     percentage: 15,
     icon: <Icon.House />,
-    arrow: <Icon.ArrowUp />,
+    arrow: (
+      <div className="text-special-red">
+        <Icon.ArrowUp size={16} />
+      </div>
+    ),
   },
   {
     id: 2,
@@ -40,7 +44,11 @@ export const expensesBreakdowns = [
     amount: 350,
     percentage: 8,
     icon: <Icon.Food />,
-    arrow: <Icon.ArrowDown />,
+    arrow: (
+      <div className="text-special-green">
+        <Icon.ArrowDown size={16} />
+      </div>
+    ),
   },
   {
     id: 3,
