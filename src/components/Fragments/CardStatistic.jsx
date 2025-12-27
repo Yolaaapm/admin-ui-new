@@ -1,12 +1,22 @@
 import React from "react"
 import Card from "../Elements/Card";
+import BarsDataset from "../Elements/BarsDataset";
 
-function CardStatistic() {
+function CardStatistic(props) {
+  const { data } = props;
+  
   return (
     <>
         <Card
-            title="Statistics"
-            desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, autem porro asperiores numquam sed veritatis debitis beatae amet laboriosam fuga pariatur sapiente suscipit culpa facere voluptatem. Repellat asperiores doloribus earum!"
+          title="Statistics"
+          desc={
+            <>
+              <select className="font-bold text-2xl ">
+              <option>Weekly Comparison</option>
+              </select>
+              <BarsDataset dataset={data} />
+            </>
+          }
         />
     </>
   );
