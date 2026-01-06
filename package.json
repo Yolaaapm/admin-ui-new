@@ -17,11 +17,13 @@
     "@mui/x-charts": "^8.23.0",
     "@tailwindcss/vite": "^4.1.13",
     "axios": "^1.13.2",
+    "formik": "^2.4.9",
     "jwt-decode": "^4.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^7.10.1",
-    "tailwindcss": "^4.1.13"
+    "tailwindcss": "^4.1.13",
+    "yup": "^1.7.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
