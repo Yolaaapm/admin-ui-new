@@ -12,7 +12,7 @@ function CardBalance(props) {
       <Card
         title="Total Balance"
         desc={
-					<DotsMobileStepper
+			<DotsMobileStepper
 	          data={data.map((item) => (
 	            <div key={item.id} className="p-2">
 	              <div className="flex justify-between">
