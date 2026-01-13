@@ -1,24 +1,29 @@
 import "./App.css";
 import SignInPage from "./pages/signIn";
 import SignUpPage from "./pages/signUp";
-import ErrorPage from "./pages/error";
+import ErrorPage from "./pages/error"; 
 import DashboardPage from "./pages/dashboard";
 import BalancePage from "./pages/balance";
-import ExpensesPage from "./pages/expenses";
-import { createBrowserRouter, Navigate, RouterProvider } from "react-router-dom";
+import { 
+  createBrowserRouter, 
+  Navigate,
+  RouterProvider,
+} from "react-router-dom";
+
 import { useContext } from "react";
 import { AuthContext } from "./context/authContext";
+import ExpensesPage from "./pages/expenses";
 
 function App() {
   const { user } = useContext(AuthContext);
 
   const RequireAuth = ({ children }) => {
     return user ? children : <Navigate to="/login" />;
-  }
+  };
 
   const NotRequireAuth = ({ children }) => {
     return user ? <Navigate to="/" /> : children;
-  }
+  };
 
   const myRouter = createBrowserRouter([
     {
@@ -54,14 +59,15 @@ function App() {
         </RequireAuth>
       ),
     },
+
     {
-      path: "/expense", 
+      path: "/expenses",
       element: (
         <RequireAuth>
           <ExpensesPage />
         </RequireAuth>
       ),
-    },
+    }
   ]);
 
   return (
